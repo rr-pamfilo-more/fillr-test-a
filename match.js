@@ -1,6 +1,4 @@
 module.exports.match = function (hash) {
-
-  // Write your solution to Task #2 - Match Metadata task here
   const findMatches = []
   let pattern = /card expire date/i;
 
@@ -11,8 +9,5 @@ module.exports.match = function (hash) {
       findMatches.push(hashMdata)
     }
   }
-  
-  //console.log(JSON.stringify(hash))
   return findMatches;
 }
-

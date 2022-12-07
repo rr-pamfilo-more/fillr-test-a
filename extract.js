@@ -1,6 +1,5 @@
 module.exports.extract = function (window) {
 
-  // Write your solution to Task #2 - Extract Metadata task here
   const obj = {};
 
   // specific form which contains the Amazon and eCommerce controls
