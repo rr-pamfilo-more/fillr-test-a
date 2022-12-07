@@ -1,5 +1,4 @@
 module.exports.extract = function (window) {
-
   const obj = {};
 
   // specific form which contains the Amazon and eCommerce controls
