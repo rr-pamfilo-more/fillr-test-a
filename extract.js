@@ -1,4 +1,5 @@
 module.exports.extract = function (window) {
+
   const obj = {};
 
   // specific form which contains the Amazon and eCommerce controls
@@ -11,13 +12,11 @@ module.exports.extract = function (window) {
   formCtrls.forEach((element) => {
     // passes in all name attributes and control labels to each variable and combines it to create the metadata
     const nameAttributes = element.name;
-    const ctrlLabels = element.parentNode.previousElementSibling.innerText; // will be obj keys
-    obj[ctrlLabels] = ctrlLabels + " " + nameAttributes; // will be obj values
+    const ctrlLabels = element.parentNode.previousElementSibling.innerHTML.trim(); // will be obj keys
+    obj[ctrlLabels] = `${ctrlLabels} ${nameAttributes}`; // will be obj values
   })
-
+  
+  // for viewing returned data when running tests
+  console.log('Extracted metada', obj)
   return obj
 }
-
-
-
-
