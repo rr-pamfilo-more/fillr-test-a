@@ -1,14 +1,14 @@
 module.exports.match = function (hash) {
-  const findMatches = []
-  let pattern = /card expire/i;
-
+  const foundMatches = []
+  
   // Used Object.entries to iterate through hash object
+  const lookFor = new RegExp(/expire/, 'i')
   for (const [hashMdata] of Object.entries(hash)) {
     // searches through metadata for pattern matching
-    pattern.test(hashMdata) === true ? findMatches.push(hashMdata) : false;
+    lookFor.test(hashMdata) === true ? foundMatches.push(hashMdata) : false;
   }
 
   // for viewing returned data when running tests
-  console.log(findMatches)
-  return findMatches;
+  console.log(foundMatches)
+  return foundMatches;
 }

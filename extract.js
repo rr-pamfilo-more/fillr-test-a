@@ -17,6 +17,6 @@ module.exports.extract = function (window) {
   })
   
   // for viewing returned data when running tests
-  console.log('Extracted metada', obj)
+  console.log('returned matching object', obj)
   return obj
 }
