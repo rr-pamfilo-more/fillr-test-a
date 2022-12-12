@@ -2,9 +2,6 @@ module.exports.extract = function (window) {
 
   const obj = {};
 
-  // specific form which contains the Amazon and eCommerce controls
-  //const pageForm = window.document.forms[1];
-
   // get and store all form elements
   const formCtrls = Array.from(window.document.forms[1].elements);
 
@@ -15,7 +12,5 @@ module.exports.extract = function (window) {
     obj[ctrlLabels] = `${ctrlLabels} ${element.name}`; // will be obj values
   })
   
-  // for viewing returned data when running tests
-  console.log('returned matching object', obj)
   return obj
 }
